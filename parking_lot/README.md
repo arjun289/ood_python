@@ -26,36 +26,29 @@ Different locations have different fee models. Below are a few possible models:
 
 Per-hour flat fees
 
-*Vehicle*   | *Fee*
-Motorcyle     10
-Car/SUV       20
-Bus/Truck     50
+| **Vehicle** | **Fee** |
+|-------------|---------|
+| Motorcyle   | 10      |
+| Car/SUV     | 20      |
+| Bus/Truck   | 50      |
 
 **Stadium**
 Flat rate up to a few hours and then per-hour rate. The total fee is the sum of 
 all the previous interval fees. No parking spots for buses/trucks at the stadium.
 
-*Vehicle*         *Interval*              *Fee*
-Motorcycle        [0, 4) hours            30
-                  [4, 12) hours           60
-                  [12, Infinity) hours    100 per hour
-
-Car/SUV           [0, 4) hours            60
-                  [4, 12) hours           120
-                  [12, Infinity) hours    200 per hour
+| **Vehicle** | **Interval**                                    | **Fee**             |
+|-------------|-------------------------------------------------|---------------------|
+| Motorcycle  | [0, 4) hours<br> [4, 12) hours<br> [12, Infinity) hours | 30<br> 60<br>  100 per hour |
+| Car/SUV     | [0, 4) hours<br> [4, 12) hours<br> [12, Infinity) hours | 60<br> 120<br> 200 per hour |
 As stated by the notation, the start times are inclusive and the end times are exclusive.
 
 ** Airport
 Flat rate up to one day. Then per-day rate. There is no summing up of the previous interval fees. No parking spots for buses/trucks at the airport.
 
-*Vehicle*           *Interval*              *Fee*
-Motorcycle          [0, 1) hours            Free
-                    [1, 8) hours            40
-                    [8, 24) hours           60
-                    Each day                80
-Car/SUV             [0, 12) hours           60
-                    [12, 24) hours          80
-                    Each day                100
+| **Vehicle** | **Interval**                                                 | **Fee**        |
+|-------------|--------------------------------------------------------------|----------------|
+| Motorcycle  | [0, 1) hours<br> [1, 8) hours<br> [8, 24) hours<br> Each day | Free<br> 40<br> 60<br> 80 |
+| Car/SUV     | [0, 12) hours<br> [12, 24) hours<br> Each day            | 60<br> 80<br> 100      |
 
 As stated by the notations, the start times are inclusive and end times are exclusive.
 
@@ -93,5 +86,4 @@ Checkout the use case diagram
 ### ParkingLot
 - attrs: id,name, address
 - composition: parkingspots, entrance/exit, lot_type, parking_floor
-
 
