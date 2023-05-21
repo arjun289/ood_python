@@ -1,11 +1,11 @@
 from abc import ABC, abstractmethod
 from typing import Union
-from helpers.range_dict import RangeDict
+from parking_lot.helpers.range_dict import RangeDict
 
 
 class FeeModel(ABC):
 
-    rate_model: dict[str, Union(RangeDict, int)]
+    rate_model: dict[str, Union[RangeDict, int]]
 
     @abstractmethod
     def calculate_fee(self, ticket):

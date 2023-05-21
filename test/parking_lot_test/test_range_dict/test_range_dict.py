@@ -12,3 +12,4 @@ def valid_range_dict():
 def test_range_dict_get(valid_range_dict):
     assert valid_range_dict[1] == "foo"
     assert valid_range_dict[5] == "bar"
+
